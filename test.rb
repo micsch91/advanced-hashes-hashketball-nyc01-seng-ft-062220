@@ -1,10 +1,9 @@
-require 'pry'
-# Write your code below game_hash
 def game_hash
   {
     home: {
       team_name: "Brooklyn Nets",
       colors: ["Black", "White"],
+      key: ["as", "dss"],
       players: [
         {
           player_name: "Alan Anderson",
@@ -17,6 +16,7 @@ def game_hash
           blocks: 1,
           slam_dunks: 1
         },
+        # {hello: "world"},
         {
           player_name: "Reggie Evans",
           number: 30,
@@ -127,95 +127,109 @@ def game_hash
   }
 end
 
-# Write code here
-def num_points_scored(players_name)
-  game_hash.each do |location, team|
-    team.each do | attribute, data|
-    if attribute == :players
-      data.each do |player|
-        if player[:player_name] == players_name
-          return player[:points]
-          end
-        end
-      end
-    end
-  end
-end
 
-def shoe_size(players_name)
-  game_hash.each do |location, team|
-    team.each do |attribute, data|
-      if attribute == :players
-        player_data = data
-        player_data.each do |player|
-          if player[:player_name] == players_name
-            return player[:shoe]
-          end
-        end
-      end
-    end
-  end
-end
+# def team_colors(team_name)
+#   game_hash.each do | location, team_data |
+#     puts "game_hash_counter"
+#     team_data.each do |idk|
+#       puts "team_data_counter"
+#       puts idk
+#     #if team_data[:team_name] == team_name
+#       #return team_data[:colors]
+#   #  end
+#   end
+# end
+# end
+# puts team_colors("Brooklyn Nets")
+#
+# def calc_add(n)
+#   1 + n
+# end
+# puts calc_add("s")
+#
+# def team_names
+#   game_hash.map do | location, team_data |
+#     team_data.map  do | tname |
+#         puts tname[:team_data].to_a
+#     end
+#    end
+# end
 
-def team_colors(team_name)
-  game_hash.each do | location, team_data |
-      if team_data[:team_name] == team_name
-        return team_data[:colors]
-      end
-  end
-end
+# r1 = [[1, 2], [3,4,5] ]
+  
+# # p r1[2][1]
 
-def team_names
-  results_array = []
-  game_hash.each do |location, team_data|
-    results_array << team_data[:team_name]
-  end
-  results_array
-end
+# p r1[0]
+# p r1[1]
+
+# r1.each do | i |
+#   puts "value of first index #{i}"
+# i.each do | fr |
+#   puts "value of second index #{fr}"
+#   end
+# end
 
 
 def player_numbers(team_name)
   new_array = []
-  game_hash.map do | location, team_data |
-    team_data.map do | attribute, data |
-      data.map do | player |
-        if team_name == "Brooklyn Nets" || team_name == "Charlotte Hornets"
-          new_array << player[:number]
-        end
-return new_array
-      end
-    end
-  end
-end
-
-#if team_name == :team_name
-  #puts [:players][:number]
-
-
-def player_stats(players_name)
-  game_hash.each do |location, team|
-    team.each do |attribute, data|
-      if attribute == :players
-        data.each do |player|
-          if player[:player_name] == players_name
-            return player
+  game_hash.each do | location, team_data |
+    # puts team_data
+    if team_data[:team_name] == team_name
+      puts team_data
+      team_data.each do | attribute, data |
+        if attribute == :players
+          data.each do | pstat |
+          new_array << pstat[:number]
           end
         end
       end
-    end
-  end
-end
+    end 
+  end  
+  return new_array
+end    
+    p player_numbers("Brooklyn N")
+    
+    
+    
+    
+    
+    
+    
+    
+    
+#     team_data.each do | attribute, data |
+#       if team_name == "Brooklyn Nets" || team_name == "Charlotte Hornets"
+#       data.each do | player |
+#         puts player
 
-def big_shoe_rebounds
-  game_hash.each do | location, team |
-    team.each do | attribute, data |
-      if attribute == :players
-       data.each do | player |
-          if player[:shoe].max
-            return player[:rebounds]
-          end
-        end
-      end
-    end
-  end
-end
+#         # new_array << player[:number]
+#       # end
+# #return new_array
+#     end
+#     end
+#   end
+# end
+
+# p player_numbers("Brooklyn Nets")
+
+
+
+
+
+
+
+# # Write code here
+# def num_points_scored(players_name)
+#   game_hash.each do |location, team_data|
+#     team_data.each do |attribute, data|
+#     if attribute == :players
+#       data.each do |player|
+#           if player[:player_name] == players_name
+#           return player[:points]
+#         end
+#       end
+#      end
+#     end
+#   end
+# end
+# num_points_scored("Brook Lopez")
