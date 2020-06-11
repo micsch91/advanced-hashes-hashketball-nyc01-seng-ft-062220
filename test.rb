@@ -170,7 +170,7 @@ end
       if attribute == :players
        data.each do | player |
           if player[:shoe]
-            return player[:rebounds]
+            puts player[:rebounds]
           end
         end
       end
