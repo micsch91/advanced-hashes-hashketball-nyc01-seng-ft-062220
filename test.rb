@@ -184,3 +184,21 @@ def big_shoe_rebounds1
 end
 big_shoe_rebounds
 
+def big_shoe_rebounds
+  max = 0
+  rebound = 0
+  game_hash.each do | location, team |
+    team.each do | attribute, data |
+      if attribute == :players
+       data.each do | player |
+          if player[:shoe] > max
+            max = player[:shoe]
+            rebound = player[:rebounds]
+            # puts player[:rebounds]
+          end
+        end
+      end
+    end
+  end
+  p rebound
+end
