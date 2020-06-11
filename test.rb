@@ -200,7 +200,7 @@ def big_shoe_rebounds
   max_index = new_array.find_index(new_array.max)
   #puts game_hash[:home][:players][max_index][:rebounds]
   game_hash.each do | location, team |
-   puts  team[:players][max_index][:rebounds]
+   puts team[:players][max_index][:rebounds]
   end
 end
 big_shoe_rebounds
