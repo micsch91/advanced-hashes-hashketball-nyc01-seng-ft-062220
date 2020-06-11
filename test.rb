@@ -189,11 +189,12 @@ def big_shoe_rebounds
   game_hash.each do | location, team |
     team.each do | attribute, data |
       if attribute == :players
-       data.each do | player |
+        data.each do | player |
           new_array << player[:shoe]
-            
+    
           
         end
+        p array
       end
     end
   end
