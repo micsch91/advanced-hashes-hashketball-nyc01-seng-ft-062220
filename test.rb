@@ -176,7 +176,7 @@ def big_shoe_rebounds
             if new_array.max > max
                 rebound = player[:rebounds]
             # puts player[:rebounds]
-          
+          end
         end
       end
     end
