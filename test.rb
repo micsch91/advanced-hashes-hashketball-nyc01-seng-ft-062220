@@ -185,8 +185,7 @@ end
 
 
 def big_shoe_rebounds
-  max = 0
-  rebound = 0
+  new_array = []
   game_hash.each do | location, team |
     team.each do | attribute, data |
       if attribute == :players
