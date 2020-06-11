@@ -191,7 +191,7 @@ def big_shoe_rebounds
       if attribute == :players
         data.each do | player |
           new_array << player[:shoe]
-    
+            
           
         end
       end
