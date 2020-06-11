@@ -197,6 +197,6 @@ def big_shoe_rebounds
       end
     end
   end
-  p new_array.max
+  p new_array
 end
 big_shoe_rebounds
