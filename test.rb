@@ -31,7 +31,7 @@ def game_hash
         {
           player_name: "Brook Lopez",
           number: 11,
-          shoe: 17,
+          shoe: 19,
           points: 17,
           rebounds: 19,
           assists: 10,
