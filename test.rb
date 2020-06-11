@@ -165,7 +165,6 @@ end
   
     
 def big_shoe_rebounds
-  new_array = []
   max = 0
   rebound = 0
   game_hash.each do | location, team |
