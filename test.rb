@@ -173,7 +173,7 @@ def big_shoe_rebounds
           new_array << player[:shoe]
 
             # puts player[:rebounds]
-          end
+          
         end
       end
     end
