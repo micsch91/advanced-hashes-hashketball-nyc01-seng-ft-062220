@@ -176,20 +176,19 @@ end
 
 def player_numbers(team_name)
   new_array = []
-  game_hash.map do | location, team_data |
-    team_data.map do | attribute, data |
-      data.map do | player |
-        if team_name == "Brooklyn Nets" || team_name == "Charlotte Hornets"
-          new_array << player[:number]
+  game_hash.each do | location, team_data |
+    if team_data[:team_name] == team_name
+      team_data.each do | attribute, data |
+        if attribute == :players
+          data.each do | pstat |
+          new_array << pstat[:number]
+          end
         end
-return new_array
       end
-    end
-  end
-end
-
-#if team_name == :team_name
-  #puts [:players][:number]
+    end 
+  end  
+return new_array
+end   
 
 
 def player_stats(players_name)
