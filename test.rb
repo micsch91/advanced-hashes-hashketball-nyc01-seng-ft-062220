@@ -170,12 +170,14 @@ def big_shoe_rebounds
     team.each do | attribute, data |
       if attribute == :players
        data.each do | player |
-          player[:shoe]
-            puts player[:rebounds]
+          new_array << player[:shoe]
+
+            # puts player[:rebounds]
           end
         end
       end
     end
+    p new_array
   end
 end
 big_shoe_rebounds
