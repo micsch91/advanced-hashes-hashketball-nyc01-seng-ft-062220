@@ -147,13 +147,6 @@ end
 # end
 # puts calc_add("s")
 #
-# def team_names
-#   game_hash.map do | location, team_data |
-#     team_data.map  do | tname |
-#         puts tname[:team_data].to_a
-#     end
-#    end
-# end
 
 # r1 = [[1, 2], [3,4,5] ]
   
@@ -169,67 +162,18 @@ end
 #   end
 # end
 
-
-def player_numbers(team_name)
-  new_array = []
-  game_hash.each do | location, team_data |
-    # puts team_data
-    if team_data[:team_name] == team_name
-      puts team_data
-      team_data.each do | attribute, data |
-        if attribute == :players
-          data.each do | pstat |
-          new_array << pstat[:number]
+  
+    
+  def big_shoe_rebounds
+  game_hash.each do | location, team |
+    team.each do | attribute, data |
+      if attribute == :players
+       data.each do | player |
+          if player[:shoe]
+            return player[:rebounds]
           end
         end
       end
-    end 
-  end  
-  return new_array
-end    
-    p player_numbers("Brooklyn N")
-    
-    
-    
-    
-    
-    
-    
-    
-    
-#     team_data.each do | attribute, data |
-#       if team_name == "Brooklyn Nets" || team_name == "Charlotte Hornets"
-#       data.each do | player |
-#         puts player
-
-#         # new_array << player[:number]
-#       # end
-# #return new_array
-#     end
-#     end
-#   end
-# end
-
-# p player_numbers("Brooklyn Nets")
-
-
-
-
-
-
-
-# # Write code here
-# def num_points_scored(players_name)
-#   game_hash.each do |location, team_data|
-#     team_data.each do |attribute, data|
-#     if attribute == :players
-#       data.each do |player|
-#           if player[:player_name] == players_name
-#           return player[:points]
-#         end
-#       end
-#      end
-#     end
-#   end
-# end
-# num_points_scored("Brook Lopez")
+    end
+  end
+end
