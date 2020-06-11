@@ -197,7 +197,6 @@ def big_shoe_rebounds
       end
     end
   end
-  max_s = new_array.max
   p max_s.find_index(max_s)
 end
 big_shoe_rebounds
