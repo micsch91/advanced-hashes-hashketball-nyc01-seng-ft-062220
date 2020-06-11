@@ -198,6 +198,6 @@ def big_shoe_rebounds
     end
   end
   max_index = new_array.find_index(new_array.max)
-  puts game_hash[:home][:players][3][:rebounds]
+  puts game_hash[:home][:players][max_index][:rebounds]
 end
 big_shoe_rebounds
