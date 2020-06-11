@@ -166,12 +166,14 @@ end
     
 def big_shoe_rebounds
   new_array = []
+  max = 0
   game_hash.each do | location, team |
     team.each do | attribute, data |
       if attribute == :players
        data.each do | player |
           new_array << player[:shoe]
             if new_array.max
+          
             # puts player[:rebounds]
           
         end
