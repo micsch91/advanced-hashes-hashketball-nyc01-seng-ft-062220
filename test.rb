@@ -174,6 +174,7 @@ def big_shoe_rebounds
        data.each do | player |
           new_array << player[:shoe]
           if new_array.max > max
+            max = player[:shoe]
             rebound = player[:rebounds]
             # puts player[:rebounds]
           end
