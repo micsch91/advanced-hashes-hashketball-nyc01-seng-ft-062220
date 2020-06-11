@@ -165,11 +165,12 @@ end
   
     
 def big_shoe_rebounds
+  new_array = []
   game_hash.each do | location, team |
     team.each do | attribute, data |
       if attribute == :players
        data.each do | player |
-          if player[:shoe]
+          player[:shoe]
             puts player[:rebounds]
           end
         end
