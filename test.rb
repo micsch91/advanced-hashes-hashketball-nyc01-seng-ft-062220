@@ -164,7 +164,7 @@ end
 
   
     
-def big_shoe_rebounds
+def big_shoe_rebounds1
   max = 0
   rebound = 0
   game_hash.each do | location, team |
@@ -183,3 +183,4 @@ def big_shoe_rebounds
   p rebound
 end
 big_shoe_rebounds
+
